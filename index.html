@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Reliant Transportation provides luxury black car airport service across major Florida airports."
+  >
+
+  <title>Reliant Transportation | Florida Airport Service</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Luxury black car service</p>
+
+      <h1>Reliant Transportation</h1>
+
+      <p>
+        Private airport pickups and drop-offs in a spacious Chevrolet
+        Suburban, serving major airports across Florida.
+      </p>
+
+      <a class="button" href="#ride-request">Request a Ride</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Airports -->
+    <section aria-labelledby="airports-title">
+      <h2 id="airports-title">Florida Airport Transportation</h2>
+
+      <p class="lead">
+        Start or finish your trip with dependable, private transportation
+        to and from Florida's busiest airport destinations.
+      </p>
+
+      <div class="airports" aria-label="Airports served">
+        <span>Tampa</span>
+        <span>Orlando</span>
+        <span>Miami</span>
+        <span>Fort Myers</span>
+        <span>Sarasota</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Vehicle and drivers -->
+    <section aria-labelledby="service-title">
+      <h2 id="service-title">Comfort You Can Rely On</h2>
+
+      <p class="lead">
+        Our Chevrolet Suburban combines generous room with professional
+        service for solo travelers, families, and groups.
+      </p>
+
+      <div class="details">
+        <div class="detail">
+          <strong>Up to 7 passengers</strong>
+          Room for your group and luggage.
+        </div>
+
+        <div class="detail">
+          <strong>Licensed drivers</strong>
+          Professional drivers prepared for every trip.
+        </div>
+
+        <div class="detail">
+          <strong>Background checked</strong>
+          Added confidence from pickup to drop-off.
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Testimonials and ride request form -->
+    <section aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">What Riders Say</h2>
+
+      <p class="lead">
+        A few examples of the calm, comfortable experience Reliant
+        Transportation aims to provide.
+      </p>
+
+      <div class="testimonials">
+        <blockquote>
+          <p>
+            "Our airport pickup was smooth, punctual, and comfortable.
+            The Suburban had plenty of room for our family and luggage."
+          </p>
+
+          <footer>— Danielle R., Tampa</footer>
+        </blockquote>
+
+        <blockquote>
+          <p>
+            "After a long flight, it was a relief to have a professional
+            driver waiting for us. The entire ride felt easy and dependable."
+          </p>
+
+          <footer>— Marcus T., Orlando</footer>
+        </blockquote>
+
+        <blockquote>
+          <p>
+            "Clean vehicle, courteous service, and excellent communication.
+            I would gladly choose Reliant for another Florida airport trip."
+          </p>
+
+          <footer>— Alicia M., Sarasota</footer>
+        </blockquote>
+      </div>
+
+      <div class="ride-request" id="ride-request">
+        <h3>Request a Ride</h3>
+
+        <p>
+          Share your trip details and Reliant Transportation can follow up
+          about availability.
+        </p>
+
+        <form id="ride-form" action="https://formspree.io/f/mdekonaz" method="POST">
+          <label>
+            Full name
+
+            <input
+              type="text"
+              name="name"
+              autocomplete="name"
+              required
+            >
+          </label>
+
+          <label>
+            Phone number
+
+            <input
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              required
+            >
+          </label>
+
+          <label>
+            Airport
+
+            <select name="airport" required>
+              <option value="">Choose an airport</option>
+              <option>Tampa</option>
+              <option>Orlando</option>
+              <option>Miami</option>
+              <option>Fort Myers</option>
+              <option>Sarasota</option>
+            </select>
+          </label>
+
+          <label>
+            Travel date
+
+            <input
+              type="date"
+              name="date"
+              required
+            >
+          </label>
+
+          <label>
+            Pickup time
+
+            <input
+              type="time"
+              name="pickup_time"
+              required
+            >
+          </label>
+
+          <label>
+            Drop-off time
+
+            <input
+              type="time"
+              name="dropoff_time"
+            >
+          </label>
+
+          <label class="full">
+            Pickup and drop-off details
+
+            <textarea
+              name="details"
+              placeholder="Include addresses, flight information, and the number of passengers."
+              required
+            ></textarea>
+          </label>
+
+          <button class="button" type="submit">
+            Submit Ride Request
+          </button>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
