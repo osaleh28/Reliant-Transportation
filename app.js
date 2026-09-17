@@ -1,7 +1,11 @@
 // Prevent selecting a travel date in the past
 (function () {
   var dateInput = document.querySelector('input[name="date"]');
-  var today = new Date().toISOString().split('T')[0];
+  var now = new Date();
+  var year = now.getFullYear();
+  var month = String(now.getMonth() + 1).padStart(2, '0');
+  var day = String(now.getDate()).padStart(2, '0');
+  var today = year + '-' + month + '-' + day;
   dateInput.setAttribute('min', today);
 })();
 
